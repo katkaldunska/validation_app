@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title> App </title>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet"
+          href="styles/jquery-ui.min.css">
+    <link rel="stylesheet"
+          type="text/css"
+          href="styles/style.css"/>
+</head>
+
+<body>
+
+    <header class="container-fluid">
+        <h1> Zarejestruj się </h1>
+    </header>
+
+    <div class="container-fluid form-container">
+        <h2> Formularz </h2>
+        <h6> * oznacza pole nieobowiązkowe </h6>
+        <form novalidate
+              method="post"
+              id="form1">
+            <div class="col-xs-12" id="gender">
+                <label class="col-xs-4"> Płeć </label>
+                <input type="radio" name="gender" value="male" id="male"/> M
+                <input type="radio" name="gender" value="female" id="female"/> K
+            </div>
+            <div class="militaryServiceBook col-xs-12"></div>
+            <label for="firstName" class="col-xs-4"> Pierwsze imię </label>
+            <input type="text"
+                   name="firstName"
+                   id="firstName"
+                   placeholder="Imię"/>
+            <label for="secondName" class="col-xs-4"> Drugie imię* </label>
+            <input type="text"
+                   name="secondName"
+                   id="secondName"
+                   placeholder="Drugie imię"/>
+            <label for="lastName" class="col-xs-4"> Nazwisko </label>
+            <input type="text"
+                   name="lastName"
+                   id="lastName"
+                   placeholder="Nazwisko"/>
+            <label for="country" class="col-xs-4"> Kraj </label>
+            <select id="country">
+                <option value=""/>
+            </select>
+            <label for="tel" class="col-xs-4"> Telefon </label>
+            <input disabled
+                   type="text"
+                   id="prefix"/>
+            <input type="tel"
+                   id="tel"/>
+            <label for="birthDate" class="col-xs-4"> Data urodzenia </label>
+            <input type="date"
+                   id="birthDate"/>
+            <label for="pesel" class="col-xs-4"> PESEL </label>
+            <input type="text"
+                   id="pesel"
+                   placeholder="XXXXXXXXXXX"/>
+            <label for="mail" class="col-xs-4"> E-mail </label>
+            <input type="email"
+                   id="mail"
+                   placeholder="anna.kowalska@example.com"/>
+            <label for="extraInfo" class="col-xs-4"> Dodatkowe informacje* </label>
+            <textarea id="extraInfo" rows="4"></textarea>
+            <h6 id="counter"> </h6>
+            <label for="agreement" class="col-xs-4"> Zgoda na przetwarzanie danych </label>
+            <input type="checkbox"
+                   id="agreement"/>
+            <button type="submit" class="col-xs-12"> Wyślij </button>
+        </form>
+    </div>
+    <div id="dialog"> </div>
+
+    <div id="map"> </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="scripts/external/jquery.js"></script>
+    <script src="scripts/external/jquery-ui.min.js"></script>
+
+    <script src="scripts/shell.js"></script>
+    <script src="scripts/errorMessages.js"></script>
+    <script src="scripts/validate.js"></script>
+    <script src="scripts/dataReader.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/popover.js"></script>
+    <script src="scripts/googleMap.js"></script>
+
+    <script>
+
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXor0x9xSEwP-ju9o7YOdxuGX9yPl6X7E&callback=initMap"></script>
+
+</body>
+</html>

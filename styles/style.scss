@@ -1,0 +1,72 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header, div {
+    padding: 1%;
+    margin: 1%;
+
+    h1 {
+        vertical-align: middle;
+        text-align: center;
+    }
+}
+
+input, select, textarea {
+    margin: 0.5%;
+    color: black;
+}
+
+button {
+    color: lightseagreen;
+    background: white;
+    border-radius: 100px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 1.5em;
+}
+
+.container-fluid {
+    background: lightseagreen;
+    color: white;
+}
+
+.error {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#gender, .militaryServiceBook {
+    margin: 0.5% 0;
+    padding: 0;
+}
+
+#prefix {
+    margin-right: 0;
+    border-right: 0;
+}
+
+#tel {
+    margin-left: 0;
+    border-left: 0;
+}
+
+#map {
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 5%;
+    img {
+        max-width: none;
+    }
+}
+
+
+
+
+
+
