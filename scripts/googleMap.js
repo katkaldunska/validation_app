@@ -11,7 +11,10 @@ function markPositionOnMap() {
         position: pos,
         map: map
     });
-    $('#messageBoard').text("Stolica " + $selectedCountry + ": " + capital)
+    if($selectedCountry !== '')
+        $('#messageBoard').text("Stolica " + $selectedCountry + ": " + capital)
+    else
+        $('#messageBoard').text("Stolica: nie wybrano ")
 }
 
 function showAllCapitals(continent) {

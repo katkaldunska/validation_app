@@ -12,9 +12,6 @@ $(document).ready(function() {
         }
     }, 5000);
 
-    $('input[type!="radio"], select, textarea').addClass('col-xs-7');
-    $('#prefix').removeClass('col-xs-7').addClass('col-xs-1');
-    $('#tel').removeClass('col-xs-7').addClass('col-xs-6');
     $('#counter').text($textareaCounter + " / " + TEXTAREA_MAX_LENGTH).addClass('col-xs-offset-4 col-xs-8');
 
     $('#gender').click(function() {
@@ -43,10 +40,18 @@ $(document).ready(function() {
         }
     });
 
+    $('#showAllCapitals').click(function() {
+        if ($(this).is(':checked')) {
+            var continent = $('#capitals option:selected').val();
+            showAllCapitals(continent)
+        }
+    });
+
     $('#capitals').change(function() {
         $('#showAllCapitals').prop("checked", true);
         var continent = $('#capitals option:selected').val();
         showAllCapitals(continent);
     })
+
 
 });

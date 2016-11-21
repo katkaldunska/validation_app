@@ -33,52 +33,64 @@
             <input type="text"
                    name="firstName"
                    id="firstName"
-                   placeholder="Imię"/>
+                   placeholder="Imię"
+                   class="col-xs-7"/>
             <label for="secondName" class="col-xs-4"> Drugie imię (opcjonalnie) </label>
             <input type="text"
                    name="secondName"
                    id="secondName"
-                   placeholder="Drugie imię"/>
+                   placeholder="Drugie imię"
+                   class="col-xs-7"/>
             <label for="lastName" class="col-xs-4"> Nazwisko </label>
             <input type="text"
                    name="lastName"
                    id="lastName"
-                   placeholder="Nazwisko"/>
+                   placeholder="Nazwisko"
+                   class="col-xs-7"/>
             <label for="country" class="col-xs-4"> Kraj </label>
-            <select id="country">
+            <select id="country"
+                    class="col-xs-7">
                 <option value=""/>
             </select>
             <label for="tel" class="col-xs-4"> Telefon </label>
             <input disabled
                    type="text"
-                   id="prefix"/>
+                   id="prefix"
+                   class="col-xs-1"/>
             <input type="tel"
-                   id="tel"/>
+                   id="tel"
+                   class="col-xs-6"/>
             <label for="birthDate" class="col-xs-4"> Data urodzenia </label>
             <input type="date"
                    id="birthDate"
-                   placeholder="RRRR-MM-DD"/>
+                   placeholder="RRRR-MM-DD"
+                   class="col-xs-7"/>
             <label for="pesel" class="col-xs-4"> PESEL </label>
             <input type="text"
                    id="pesel"
-                   placeholder="XXXXXXXXXXX"/>
+                   placeholder="XXXXXXXXXXX"
+                   class="col-xs-7"/>
             <label for="mail" class="col-xs-4"> E-mail </label>
             <input type="email"
                    id="mail"
-                   placeholder="anna.kowalska@example.com"/>
+                   placeholder="anna.kowalska@example.com"
+                   class="col-xs-7"/>
             <label for="extraInfo" class="col-xs-4"> Dodatkowe informacje (opcjonalnie) </label>
-            <textarea id="extraInfo" rows="4"></textarea>
+            <textarea id="extraInfo" rows="4" class="col-xs-7"></textarea>
             <h6 id="counter"> </h6>
-            <label for="agreement" class="col-xs-4"> Zgoda na przetwarzanie danych </label>
-            <input type="checkbox"
-                   id="agreement"/>
+            <div class="agreement">
+                <label for="agreement" class="col-xs-4"> Zgoda na przetwarzanie danych </label>
+                <input type="checkbox"
+                       id="agreement" class="col-xs-offset-4 col-xs-1"/>
+            </div>
             <button type="submit" class="col-xs-12"> Wyślij </button>
         </form>
     </div>
     <div id="dialog"> </div>
-    <h1> Mapa </h1>
+
     <form id="mapSelect">
         <div class="col-xs-12" id="userChoice">
+            <h1> Mapa </h1>
             <label class="col-xs-12"> Co pokazać? </label>
             <div class="col-xs-12">
                 <input type="radio"
@@ -92,12 +104,10 @@
                 <input type="radio"
                        name="choice"
                        value="capitals"
-                       id="showAllCapitals"
-                       style="display: none"/> Albo pokaż stolice:
+                       id="showAllCapitals"/> Albo pokaż stolice:
             </div>
             <select id="capitals">
-                <option value="all"
-                        selected> Wszystkie </option>
+                <option value="all"> Wszystkie </option>
                 <option value="Asia"> Azja </option>
                 <option value="Europe"> Europa </option>
                 <option value="Polar"> Antarktyda </option>
@@ -105,9 +115,10 @@
                 <option value="Africa"> Afryka </option>
                 <option value="Americas"> Ameryki </option>
             </select>
+            <p id="messageBoard">  </p>
         </div>
     </form>
-    <p id="messageBoard"> Warszawa: </p>
+
     <div id="map"> </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
