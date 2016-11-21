@@ -4,14 +4,9 @@ html, body {
     padding: 0;
 }
 
-header, div {
-    padding: 1%;
-    margin: 1%;
-
-    h1 {
-        vertical-align: middle;
-        text-align: center;
-    }
+h1 {
+    vertical-align: middle;
+    text-align: center;
 }
 
 input, select, textarea {
@@ -60,6 +55,7 @@ button {
     height: 100%;
     width: 100%;
     margin-bottom: 5%;
+
     img {
         max-width: none;
     }

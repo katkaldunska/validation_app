@@ -28,9 +28,9 @@ $(document).ready(function() {
         }
     });
 
-    $('#country').click(function() {
+    $('#country').change(function() {
         $selectedCountry = $('#country option:selected').text();
-        app.getPrefix();
+        app.getCountryInfo();
     });
 
     $('#extraInfo').keyup(function(){
@@ -42,5 +42,11 @@ $(document).ready(function() {
                 .text($textareaCounter + ' / ' + TEXTAREA_MAX_LENGTH + " Przekroczono max. limit");
         }
     });
+
+    $('#capitals').change(function() {
+        $('#showAllCapitals').prop("checked", true);
+        var continent = $('#capitals option:selected').val();
+        showAllCapitals(continent);
+    })
 
 });

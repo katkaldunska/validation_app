@@ -12,11 +12,17 @@ app = {
         })
     },
 
-    getPrefix: function () {
+    getCountryInfo: function () {
         dataReader.getCountries(function(countries){
             countries
                 .filter(country => country.name === $selectedCountry)
-                .map(country => $('#prefix').attr({value: "+" + country.callingCodes[0], disabled: 'disabled' }))
+                .map(country => {
+                    $('#prefix').attr({value: "+" + country.callingCodes[0], disabled: 'disabled' });
+                    latlng = country.latlng;
+                    capital = country.capital;
+                    if($('#capital').prop('checked'))
+                        markPositionOnMap();
+                })
         })
     },
 

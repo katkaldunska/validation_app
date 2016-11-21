@@ -57,7 +57,8 @@
                    id="tel"/>
             <label for="birthDate" class="col-xs-4"> Data urodzenia </label>
             <input type="date"
-                   id="birthDate"/>
+                   id="birthDate"
+                   placeholder="RRRR-MM-DD"/>
             <label for="pesel" class="col-xs-4"> PESEL </label>
             <input type="text"
                    id="pesel"
@@ -76,7 +77,41 @@
         </form>
     </div>
     <div id="dialog"> </div>
+    <h1> Mapa </h1>
+    <form id="mapSelect">
+        <div class="col-xs-12" id="userChoice">
+            <label class="col-xs-12"> Co pokazać? </label>
+            <div class="col-xs-12">
+                <input type="radio"
+                       name="choice"
+                       value="capital"
+                       id="capital"
+                       checked
+                       onchange="markPositionOnMap()"/> Pokaż stolicę wybranego (wyżej) kraju
+            </div>
+            <div class="col-xs-12">
+                <input type="radio"
+                       name="choice"
+                       value="capitals"
+                       id="showAllCapitals"
+                       style="display: none"/> Albo pokaż stolice:
+            </div>
+            <select id="capitals">
+                <option value="all"
+                        selected> Wszystkie </option>
+                <option value="Asia"> Azja </option>
+                <option value="Europe"> Europa </option>
+                <option value="Polar"> Antarktyda </option>
+                <option value="Oceania"> Australia i Oceania </option>
+                <option value="Africa"> Afryka </option>
+                <option value="Americas"> Ameryki </option>
+            </select>
 
+
+
+        </div>
+    </form>
+    <p id="messageBoard"> Warszawa: </p>
     <div id="map"> </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -92,10 +127,7 @@
     <script src="scripts/popover.js"></script>
     <script src="scripts/googleMap.js"></script>
 
-    <script>
-
-    </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXor0x9xSEwP-ju9o7YOdxuGX9yPl6X7E&callback=initMap"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXor0x9xSEwP-ju9o7YOdxuGX9yPl6X7E&callback=markPositionOnMap"></script>
 
 </body>
 </html>
