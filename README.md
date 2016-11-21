@@ -1,6 +1,6 @@
 # Validation App
 
-Form Validator is an app representing different types of validation on various kinds of inputs.
+Validation App presents different types of validation on various kinds of inputs.
 
   - By selecting M - male  from first radio, you will add field for military service book
   - By selecting country you will add phone prefix, and place position of capital in selected country
@@ -14,11 +14,10 @@ Validation App uses a number of external sources to work properly:
 
 * [restcountries.eu] - https://restcountries.eu/rest/v1/all - Api with countries list
 * [Maps google] - source of maps used
-* [jQuery]
-
+* [jQuery] - cdn
+* [Heroku] - Api for sending forms
 
 ### Installation
-
 
 
 Download (zip or clone) to you home dir, and run index.html .
@@ -30,13 +29,12 @@ More details coming soon.
 ### Development
 
 
-Form Validator uses  jQuery, HTML5 and SCSS.
+Validation App uses  jQuery, HTML5 and SCSS.
 
 ### Todos
 
  - Write Tests
  - Extend custom error handling
-
 
 
 ### Maintainers

@@ -15,7 +15,6 @@ function markPositionOnMap() {
 }
 
 function showAllCapitals(continent) {
-
     var Capital = function(name, coordinates) {
         this.name = name;
         this.coordinates = coordinates;

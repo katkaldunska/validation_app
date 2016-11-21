@@ -39,7 +39,6 @@ app = {
                 firstName: $('#firstName').val(),
                 secondName: $('#secondName').val(),
                 lastName: $('#lastName').val(),
-                lastName: $('#lastName').val(),
                 country: $('#country option:selected').val(),
                 tel: $('#prefix').val() + $('#tel').val(),
                 birthDate: $('#birthDate').val(),

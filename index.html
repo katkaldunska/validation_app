@@ -20,7 +20,6 @@
 
     <div class="container-fluid form-container">
         <h2> Formularz </h2>
-        <h6> * oznacza pole nieobowiązkowe </h6>
         <form novalidate
               method="post"
               id="form1">
@@ -35,7 +34,7 @@
                    name="firstName"
                    id="firstName"
                    placeholder="Imię"/>
-            <label for="secondName" class="col-xs-4"> Drugie imię* </label>
+            <label for="secondName" class="col-xs-4"> Drugie imię (opcjonalnie) </label>
             <input type="text"
                    name="secondName"
                    id="secondName"
@@ -67,7 +66,7 @@
             <input type="email"
                    id="mail"
                    placeholder="anna.kowalska@example.com"/>
-            <label for="extraInfo" class="col-xs-4"> Dodatkowe informacje* </label>
+            <label for="extraInfo" class="col-xs-4"> Dodatkowe informacje (opcjonalnie) </label>
             <textarea id="extraInfo" rows="4"></textarea>
             <h6 id="counter"> </h6>
             <label for="agreement" class="col-xs-4"> Zgoda na przetwarzanie danych </label>
@@ -106,9 +105,6 @@
                 <option value="Africa"> Afryka </option>
                 <option value="Americas"> Ameryki </option>
             </select>
-
-
-
         </div>
     </form>
     <p id="messageBoard"> Warszawa: </p>
